@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style/FontAwesome_Icons/all.min.css">
+    <link rel="stylesheet" href="style/FontAwesome_Icons/fontawesome.min.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="static/Font/font.css">
+    <link rel="icon" href="static/ST_brand/icon.png">
+</head>
+<body>
+    <main>
+        <header>Password Generator</header>
+        <div class="password_container">
+            <p class="password"></p>
+            <button class="copy"><i class="fa-regular fa-copy"></i></button>
+        </div>
+        <section>
+            <div>
+                <p>password length</p>
+                <p class="num">15</p>
+            </div>
+            <div class="ranges">
+                <input type="range" class="range" min="0" max="100" minlength="1" maxlength="3" value="15">
+                <span></span>
+                <span class="progress"></span>
+            </div>
+            <div class="boxes">
+                
+                <div>
+                    <input type="checkbox" class="box uppercase">
+                    <p>include uppercase letters</p>
+                </div>
+                <div>
+                    <input type="checkbox" class="box lowercase">
+                    <p>include lowercase letters</p>
+                </div>
+                <div>
+                    <input type="checkbox" class="box numbers">
+                    <p>include numbers</p>
+                </div>
+                <div>
+                    <input type="checkbox" class="box symbols">
+                    <p>include symbols</p>
+                </div>
+            </div>
+            <button class="gen">Generate <i class="fa-solid fa-caret-right"></i></button>
+        </section>
+    </main>
+    <script src="javascript/main.js"></script>
+</body>
+</html>
