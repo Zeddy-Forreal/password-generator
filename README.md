@@ -22,7 +22,7 @@ A sleek and customizable password generator built with pure HTML, CSS, and JavaS
 ## 🚀 Live Demo
 
 Try it here👇  
-https://zeddy-foreal.github.io/password-generator
+https://zeddy-forreal.github.io/password-generator
 
 ## 📸 Preview
 
@@ -31,6 +31,6 @@ https://zeddy-foreal.github.io/password-generator
 ## 📁 How to Run Locally
 
 ```bash
-git clone https://github.com/zeddy-foreal/password-generator.git
+git clone https://github.com/zeddy-forreal/password-generator.git
 cd password-generator
 # Then open index.html in your browser
