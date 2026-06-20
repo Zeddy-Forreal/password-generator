@@ -1,16 +1,17 @@
-
+@font-face {
+    font-family: font1;
+    src: url(Font.ttf);
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     border: none;
     outline: none;
-    font-family: monospace;
-    font-size: var(--normal_size);
-    color: var(--text_color);
     background-color: transparent;
     transition: 0.3s;
-    font-weight: 800;
+    font-weight: 600;
+        font-family: font1;
 }
 body{
     height: 100dvh;
@@ -19,21 +20,27 @@ body{
     align-items: center;
     background-color: var(--background);
     overflow: hidden;
+        font-size: var(--normal_size);
+    color: var(--text_color);
+
 }
 :root{
-    --main_color: rgb(255, 117, 234);
+    --main_color: #c94cb6;
+    --sec_color: #ff7fec;
     --text_color: #b9b9b9;
     --background: #181818;
-    --background2:#272727;
+    --background2:#242424;
     --normal_size: 1.1rem;
     --big_size:2rem;
     --small_size:0.8rem;
 }
-i{
-    color: var(--main_color);
+svg{
+    color: inherit !important;
 }
 button{
     font-weight: 600;
+        cursor: pointer;
+    color: var(--main_color);
 }
 main{
     width: 450px;
@@ -50,6 +57,10 @@ main header{
     text-align: center;
     color: var(--main_color);
     font-weight: 600;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding-left: 0.1rem;
 }
 main div{
     display: flex;
@@ -58,17 +69,41 @@ main div{
 }
 main .password_container, main section{
     background-color: var(--background2);
-    border-radius: 4px;
     padding: 10px 15px;
 }
 main .password{
     width: 85%;
-    color:#b9b9b966;
+    color: #b9b9b966;
     overflow: hidden;
     text-overflow: ellipsis;
     text-wrap: nowrap;
-}
+    background-color: var(--background);
+    padding: 0.5rem 1rem;
 
+    font-size: 1rem;
+    border: 1px solid var(--main_color);
+}
+.password.active{
+    border-color: var(--sec_color);
+}
+.copy{
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid var(--main_color);
+    height: 2.21rem;
+    aspect-ratio: 1;
+    color: var(--main_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copy:hover{
+    color: var(--sec_color);
+    border-color: var(--sec_color);
+}
+.copy svg{
+    width: 60%;
+}
 main section{
     display: flex;
     flex-direction: column;
@@ -88,14 +123,24 @@ main .boxes div{
     gap: 10px;
 
 }
+
+
 main .boxes div p{
     font-size: var(--small_size);
 }
 main section .gen{
     background-color: var(--main_color);
     color: var(--background2);
-    padding: 15px;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 900;
 
+}
+.gen:hover{
+    background-color: var(--sec_color);
 }
 main section .num{
     color: var(--main_color);
@@ -106,7 +151,7 @@ main section .gen i {
     transform: translateY(0.5px);
 
 }
-main section .gen:hover i{
+main section .gen:hover svg{
     transform: translateY(0.5px) translateX(3px);
 }
 main section .ranges{
@@ -148,7 +193,7 @@ main section .range::-webkit-slider-thumb{
     z-index: 4;
 }
 main section .range::-webkit-slider-thumb:hover{
-    background-color: var(--main_color);
+    background-color: var(--sec_color);
 }
 main section .box{
     appearance: none;
@@ -163,8 +208,8 @@ main section .box{
 }
 
 main section .box:checked{
-    border-color: var(--main_color);
-    background-color: var(--main_color);
+    border-color: var(--sec_color);
+    background-color: var(--sec_color);
 }
 
 @media (max-width:360px) {
